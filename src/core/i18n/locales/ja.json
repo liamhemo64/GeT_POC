@@ -1,0 +1,59 @@
+{
+  "chat": {
+    "title": "日本 AI アシスタント",
+    "subtitle": "Powered by Gemini",
+    "welcomeMessage": "こんにちは！JapanJourney AIです。日本旅行の計画についてどのようにお手伝いしましょうか？",
+    "inputPlaceholder": "メッセージを入力...",
+    "quick1": "7日間の旅程",
+    "quick2": "おすすめのグルメ",
+    "quick3": "旅行予算"
+  },
+  "tabs": {
+    "itinerary": "旅程",
+    "discover": "発見",
+    "chat": "チャット",
+    "profile": "プロフィール"
+  },
+  "auth": {
+    "title": "JapanJourney",
+    "subtitle": "予想外の発見を",
+    "emailPlaceholder": "メールアドレス",
+    "passwordPlaceholder": "パスワード",
+    "loginButton": "ログイン",
+    "guestButton": "ゲストとして続行"
+  },
+  "personalization": {
+    "title": "日本へようこそ",
+    "subtitle": "体験をカスタマイズしましょう",
+    "interestsTitle": "興味のあることは何ですか？",
+    "adventureTitle": "冒険レベル",
+    "budgetTitle": "予算スタイル",
+    "startExploring": "探索を開始",
+    "interests": {
+      "nature": "自然",
+      "temples": "寺院",
+      "food": "グルメ",
+      "nightlife": "ナイトライフ",
+      "culture": "文化",
+      "shopping": "買い物",
+      "anime": "アニメ",
+      "hiking": "ハイキング",
+      "onsen": "温泉"
+    },
+    "levels": {
+      "relaxed": "リラックス",
+      "moderate": "普通",
+      "adventure": "冒険",
+      "budget": "節約",
+      "midrange": "標準",
+      "luxury": "豪華"
+    }
+  },
+  "activities": {
+    "title": "発見",
+    "categories": "カテゴリー",
+    "popular": "人気の体験",
+    "recommended": "あなたへのおすすめ",
+    "seeAll": "すべて見る"
+  }
+}
