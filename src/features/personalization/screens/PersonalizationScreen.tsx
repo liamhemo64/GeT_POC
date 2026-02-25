@@ -1,5 +1,6 @@
 import React from 'react';
-import { SafeAreaView, StatusBar, StyleSheet } from 'react-native';
+import { StatusBar, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { View } from 'tamagui';
 import { useNavigation } from '@react-navigation/native';
 import { WizardController } from '../components/WizardController';

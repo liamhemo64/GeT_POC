@@ -4,6 +4,10 @@
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
+    "start:clean": "expo start --clear",
+    "_comment:start": "^^^ Run 'npm start' or 'npm run start:clean' everyday for normal React/JS development. No rebuild required.",
+    "build:android": "eas build --profile development --platform android",
+    "_comment:build": "^^^ ONLY run 'npm run build:android' when you install a new package that has native C++/Java/Swift code (like expo-location, expo-camera, etc). It takes 10 mins.",
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web"
@@ -16,6 +20,7 @@
     "@tamagui/config": "^2.0.0-rc.17",
     "@tamagui/native": "^2.0.0-rc.17",
     "expo": "~54.0.33",
+    "expo-dev-client": "~6.0.20",
     "expo-font": "~14.0.11",
     "expo-image": "~3.0.11",
     "expo-linear-gradient": "~15.0.8",
