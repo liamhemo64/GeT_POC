@@ -1,0 +1,1 @@
+App.tsx(10,22): error TS2322: Type 'unknown' is not assignable to type 'TamaguiInternalConfig<GenericTokens, GenericThemes, GenericShorthands, GenericMedia, GenericAnimations, GenericFonts, GenericTamaguiSettings, string> | undefined'.

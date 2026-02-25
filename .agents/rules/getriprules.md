@@ -12,7 +12,7 @@ Your code is structured by **Domains/Features** to ensure scalability and strict
 ## 2. The Tech Stack
 
 - **Framework:** Expo SDK 54.
-- **Styling:** NativeWind v4 (Tailwind CSS).
+- **Styling:** Tamagui.
 - **Navigation:** React Navigation v7.
 - **State:** Zustand v4.
 - **I18n:** i18next (Hebrew Primary).
@@ -37,7 +37,7 @@ You must generate the code following this exact folder structure. Do not dump ev
 /src
   /core                 (Shared infrastructure)
     /i18n               (Config & Setup)
-    /theme              (NativeWind config, Colors)
+    /theme              (Tamagui config, Colors)
     /hooks              (Global hooks: useTranslatedContent)
     /components         (Reusable UI Kit: Button, Input, Text, ScreenWrapper)
     /types              (Global types)
