@@ -1,23 +1,21 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { TabNavigator } from './TabNavigator';
-import { LoginScreen } from '../features/auth/screens/LoginScreen';
-import { PersonalizationScreen } from '../features/onboarding/screens/PersonalizationScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import { View, Text } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
-export function AppNavigator() {
+// Temporary stub screens
+const AuthScreen = () => <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}><Text>Auth Screen</Text></View>;
+const FeedScreen = () => <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}><Text>Feed Screen</Text></View>;
+
+export const AppNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator 
-        initialRouteName="Login"
-        screenOptions={{ headerShown: false }}
-      >
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Personalization" component={PersonalizationScreen} />
-        <Stack.Screen name="Main" component={TabNavigator} />
+      <Stack.Navigator>
+        <Stack.Screen name="Auth" component={AuthScreen} />
+        <Stack.Screen name="Feed" component={FeedScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
-}
+};
