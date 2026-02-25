@@ -13,7 +13,7 @@ export const LoginScreen = () => {
 
   const handleSendCode = () => {
     // TODO: Replace with real SMS OTP flow (e.g. Firebase Auth, Twilio Verify)
-    navigation.replace('Feed');
+    navigation.replace('Personalization');
   };
 
   return (

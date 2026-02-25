@@ -85,11 +85,13 @@ export const lineHeight = {
 // ─── Sizes (avatars, images, cards) ──────────────────────────────────────────
 
 export const size = {
-  avatarSm:  rem(1.75),   // 28
-  avatarMd:  rem(2.5),    // 40
-  avatarLg:  rem(5),      // 80
-  btnIcon:   rem(2.125),  // 34
-  btnClose:  rem(2.25),   // 36
-  cardImg:   rem(10),     // 160
-  mapHeight: rem(14),     // 224
+  avatarSm:   rem(1.75),   // 28
+  avatarMd:   rem(2.5),    // 40
+  avatarLg:   rem(5),      // 80
+  btnIcon:    rem(2.125),  // 34
+  btnClose:   rem(2.25),   // 36
+  btnHeight:  rem(3.25),   // 52
+  cardImg:    rem(10),     // 160
+  mapHeight:  rem(14),     // 224
+  trackHeight: rem(0.375), // 6
 } as const

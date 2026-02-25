@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { View, Text } from 'react-native';
 import { LoginScreen } from '../features/auth/screens/LoginScreen';
+import { PersonalizationScreen } from '../features/personalization/screens/PersonalizationScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,6 +15,7 @@ export const AppNavigator = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Personalization" component={PersonalizationScreen} />
         <Stack.Screen name="Feed" component={FeedScreen} />
       </Stack.Navigator>
     </NavigationContainer>

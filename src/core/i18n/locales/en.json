@@ -1,0 +1,76 @@
+{
+  "welcome": "Welcome to geTrip",
+  "auth": {
+    "login": "Sign In",
+    "tagline": "Discover, Plan & Go 🌍",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "050-000-0000",
+    "sendCode": "Send Verification Code",
+    "orContinueWith": "Or continue with",
+    "google": "Google",
+    "noAccount": "Don't have an account?",
+    "register": "Join Now",
+    "phoneHint": "We'll send you a verification SMS"
+  },
+  "personalization": {
+    "progress": "Step {{current}} of {{total}}",
+    "step1": {
+      "title": "When are you traveling?",
+      "arrivalLabel": "Arrival Date",
+      "departureLabel": "Departure Date",
+      "selectDate": "Select Date"
+    },
+    "step2": {
+      "title": "Who's traveling?",
+      "solo": "Solo",
+      "couple": "Couple",
+      "friends": "Friends",
+      "family": "Family",
+      "teens": "Teens",
+      "youngChildren": "Young Children"
+    },
+    "step3": {
+      "title": "Travel Pace",
+      "relaxed": "Relaxed",
+      "moderate": "Moderate",
+      "intensive": "Intensive"
+    },
+    "step4": {
+      "title": "Nature & Hiking",
+      "viewpoints": "Viewpoints",
+      "hiking": "Short Hikes",
+      "camping": "Trekking & Camping"
+    },
+    "step5": {
+      "title": "City Vibes",
+      "abit": "A bit",
+      "moderate": "Moderate",
+      "alot": "A lot"
+    },
+    "step6": {
+      "title": "Interests (Select multiple)",
+      "art": "Art",
+      "culinary": "Culinary",
+      "nightlife": "Nightlife",
+      "anime": "Anime & Gaming",
+      "shopping": "Shopping",
+      "nature": "Nature",
+      "culture": "Culture",
+      "history": "History",
+      "sport": "Sports",
+      "photography": "Photography",
+      "architecture": "Architecture",
+      "relaxing": "Relaxing",
+      "festivals": "Festivals"
+    },
+    "step7": {
+      "title": "Your Dream Trip",
+      "placeholder": "Tell me about your dream experiences, must-sees, or any special requests..."
+    },
+    "nav": {
+      "back": "Back",
+      "next": "Next",
+      "submit": "Discover My Trip"
+    }
+  }
+}

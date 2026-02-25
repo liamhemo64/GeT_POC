@@ -1,0 +1,76 @@
+{
+  "welcome": "ברוכים הבאים ל-geTrip",
+  "auth": {
+    "login": "כניסה",
+    "tagline": "גלה, תכנן, וצא לדרך 🌍",
+    "phoneLabel": "מספר טלפון",
+    "phonePlaceholder": "050-000-0000",
+    "sendCode": "שלח קוד אימות",
+    "orContinueWith": "או המשך עם",
+    "google": "Google",
+    "noAccount": "עדיין אין חשבון?",
+    "register": "הצטרף עכשיו",
+    "phoneHint": "נשלח לך קוד ב-SMS לאימות"
+  },
+  "personalization": {
+    "progress": "שלב {{current}} מתוך {{total}}",
+    "step1": {
+      "title": "מתי אתם טסים?",
+      "arrivalLabel": "תאריך הגעה",
+      "departureLabel": "תאריך חזרה",
+      "selectDate": "בחר תאריך"
+    },
+    "step2": {
+      "title": "מי מטייל?",
+      "solo": "לבד",
+      "couple": "זוג",
+      "friends": "חברים",
+      "family": "משפחה",
+      "teens": "מתבגרים",
+      "youngChildren": "ילדים קטנים"
+    },
+    "step3": {
+      "title": "קצב הטיול",
+      "relaxed": "רגוע",
+      "moderate": "בינוני",
+      "intensive": "אינטנסיבי"
+    },
+    "step4": {
+      "title": "טבע ומסלולים",
+      "viewpoints": "נקודות תצפית",
+      "hiking": "מסלולי הליכה",
+      "camping": "טרקים וקמפינג"
+    },
+    "step5": {
+      "title": "חוויות עיר",
+      "abit": "קצת",
+      "moderate": "בינוני",
+      "alot": "הרבה"
+    },
+    "step6": {
+      "title": "תחומי עניין (אפשר לבחור כמה)",
+      "art": "אמנות",
+      "culinary": "קולינריה",
+      "nightlife": "חיי לילה",
+      "anime": "אנימה וגיימינג",
+      "shopping": "קניות",
+      "nature": "טבע",
+      "culture": "תרבות",
+      "history": "היסטוריה",
+      "sport": "ספורט",
+      "photography": "צילום",
+      "architecture": "אדריכלות",
+      "relaxing": "בטן גב",
+      "festivals": "פסטיבלים"
+    },
+    "step7": {
+      "title": "חומרי גלם לחלום",
+      "placeholder": "ספרו לי על חוויות החלומות שלכם, דברים שחשוב לכם לראות, או כל בקשה מיוחדת..."
+    },
+    "nav": {
+      "back": "חזור",
+      "next": "המשך",
+      "submit": "גלה את הטיול שלי"
+    }
+  }
+}
