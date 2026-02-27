@@ -39,9 +39,8 @@ export const Step6Interests = () => {
     <YStack gap="$xl" flex={1}>
       <Text 
         fontSize={fontSize['2xl']} 
-        fontWeight="800" 
+        fontWeight="700" 
         color={colors.primary} 
-        textAlign="auto"
       >
         {t('personalization.step6.title')}
       </Text>

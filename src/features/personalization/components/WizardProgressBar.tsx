@@ -40,7 +40,7 @@ export const WizardProgressBar = ({ currentStep, totalSteps }: WizardProgressBar
       
       <YStack width="100%" height={size.trackHeight} backgroundColor={colors.border} borderRadius={radius.full} overflow="hidden">
         {/* Use logical start property instead of left/right */}
-        <Animated.View style={[animatedStyle, { position: 'absolute', top: 0, bottom: 0, start: 0 }]} />
+        <Animated.View style={[animatedStyle, { position: 'absolute', bottom: 0, start: 0 }]} />
       </YStack>
     </YStack>
   );

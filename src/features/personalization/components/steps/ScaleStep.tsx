@@ -24,9 +24,8 @@ export const ScaleStep = ({ titleKey, fieldKey, options }: ScaleStepProps) => {
     <YStack gap="$xl" flex={1}>
       <Text 
         fontSize={fontSize['2xl']} 
-        fontWeight="800" 
+        fontWeight="700" 
         color={colors.primary} 
-        textAlign="auto"
       >
         {t(`personalization.${titleKey}`)}
       </Text>

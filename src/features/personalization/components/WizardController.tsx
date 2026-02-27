@@ -78,7 +78,7 @@ export const WizardController = ({ onComplete }: WizardControllerProps) => {
       </View>
 
       {/* Animated Step Container */}
-      <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1, overflow: 'visible' }}>
+      <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1, overflow: 'visible' }} contentContainerStyle={{ flexGrow: 1 }}>
         <Animated.View 
           key={currentStep} 
           entering={enteringAnim().springify().damping(24).stiffness(120)}

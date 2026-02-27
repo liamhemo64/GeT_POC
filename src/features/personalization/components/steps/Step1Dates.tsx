@@ -51,15 +51,14 @@ export const Step1Dates = () => {
     <YStack gap="$xl" flex={1}>
       <Text 
         fontSize={fontSize['2xl']} 
-        fontWeight="800" 
+        fontWeight="700" 
         color={colors.primary} 
-        textAlign="auto"
       >
         {t('personalization.step1.title')}
       </Text>
 
       <YStack gap="$md">
-        <Text color={colors.textSecondary} fontSize={fontSize.md} fontWeight="600" textAlign="auto">
+        <Text color={colors.textSecondary} fontSize={fontSize.md} fontWeight="600">
           {t('personalization.step1.arrivalLabel')}
         </Text>
         <TouchableOpacity
@@ -71,7 +70,8 @@ export const Step1Dates = () => {
             borderColor: data.arrivalDate ? colors.primary : colors.border,
             borderRadius: radius.lg,
             padding: spacing.lg,
-            alignItems: 'flex-start'
+            alignItems: 'flex-start',
+            width: '100%'
           }}
         >
           <Text color={data.arrivalDate ? colors.primary : colors.textSecondary} fontSize={fontSize.lg} fontWeight="600">
@@ -81,7 +81,7 @@ export const Step1Dates = () => {
       </YStack>
 
       <YStack gap="$md">
-        <Text color={colors.textSecondary} fontSize={fontSize.md} fontWeight="600" textAlign="auto">
+        <Text color={colors.textSecondary} fontSize={fontSize.md} fontWeight="600">
           {t('personalization.step1.departureLabel')}
         </Text>
         <TouchableOpacity
@@ -93,7 +93,8 @@ export const Step1Dates = () => {
             borderColor: data.departureDate ? colors.primary : colors.border,
             borderRadius: radius.lg,
             padding: spacing.lg,
-            alignItems: 'flex-start'
+            alignItems: 'flex-start',
+            width: '100%'
           }}
         >
           <Text color={data.departureDate ? colors.primary : colors.textSecondary} fontSize={fontSize.lg} fontWeight="600">
