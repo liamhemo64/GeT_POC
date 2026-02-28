@@ -27,6 +27,23 @@
       "arrivalPlaceholder": "e.g., Tokyo",
       "departurePlaceholder": "e.g., Osaka"
     },
+    "stepRentCar": {
+      "title": "Do you intend to rent a car?",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "stepThemeParks": {
+      "title": "Do you love theme parks?",
+      "yes": "Yes",
+      "no": "No",
+      "subtitle": "Select the parks you are interested in:",
+      "disneySea": "Tokyo DisneySea",
+      "disneySeaDesc": "The only sea-themed Disney park in the world with unique attractions.",
+      "universal": "Universal Studios Japan",
+      "universalDesc": "Movie theme park in Osaka, featuring Super Nintendo World and Harry Potter.",
+      "fujiQ": "Fuji-Q Highland",
+      "fujiQDesc": "Extreme roller coasters with insane views of Mount Fuji."
+    },
     "step2": {
       "title": "Who's traveling?",
       "solo": "Solo",

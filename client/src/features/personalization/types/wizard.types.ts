@@ -11,7 +11,12 @@ export interface WizardData {
   // Step 2 - Locations
   arrivalLocation: string;
   departureLocation: string;
-  // Step 3
+  // Step 3 - Rent a Car
+  rentCar: boolean | null;
+  // Step 4 - Theme Parks
+  loveParks: boolean | null;
+  selectedParks: string[];
+  // Step 5
   travelGroup:   TravelGroup | null;
   familySub:     FamilySub | null;
   // Step 4 – Travel Pace
@@ -26,13 +31,16 @@ export interface WizardData {
   wishlist:      string;
 }
 
-export const WIZARD_STEP_COUNT = 8;
+export const WIZARD_STEP_COUNT = 10;
 
 export const defaultWizardData: WizardData = {
   arrivalDate:   null,
   departureDate: null,
   arrivalLocation: '',
   departureLocation: '',
+  rentCar:       null,
+  loveParks:     null,
+  selectedParks: [],
   travelGroup:   null,
   familySub:     null,
   travelPace:    null,

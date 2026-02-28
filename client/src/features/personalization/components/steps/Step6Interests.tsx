@@ -7,19 +7,19 @@ import { colors, radius, fontSize } from '../../../../core/theme/tokens';
 import { isRTL } from '../../../../core/i18n';
 
 const INTERESTS = [
-  { id: 'art', icon: '🎨' },
-  { id: 'culinary', icon: '🍣' },
-  { id: 'nightlife', icon: '🍷' },
-  { id: 'anime', icon: '🎮' },
-  { id: 'shopping', icon: '🛍️' },
-  { id: 'nature', icon: '🌲' },
-  { id: 'culture', icon: '🎭' },
-  { id: 'history', icon: '🏛️' },
-  { id: 'sport', icon: '⚽' },
-  { id: 'photography', icon: '📸' },
-  { id: 'architecture', icon: '🏙️' },
-  { id: 'relaxing', icon: '💆' },
-  { id: 'festivals', icon: '🏮' },
+  { id: 'art' },
+  { id: 'culinary' },
+  { id: 'nightlife' },
+  { id: 'anime' },
+  { id: 'shopping' },
+  { id: 'nature' },
+  { id: 'culture' },
+  { id: 'history' },
+  { id: 'sport' },
+  { id: 'photography' },
+  { id: 'architecture' },
+  { id: 'relaxing' },
+  { id: 'festivals' },
 ];
 
 export const Step6Interests = () => {
@@ -49,7 +49,7 @@ export const Step6Interests = () => {
       </Text>
 
       <XStack flexWrap="wrap" gap="$md">
-        {INTERESTS.map(({ id, icon }) => {
+        {INTERESTS.map(({ id }) => {
           const isSelected = data.interests.includes(id);
           return (
             <TouchableOpacity
@@ -59,16 +59,15 @@ export const Step6Interests = () => {
               style={{
                 flexDirection: 'row',
                 alignItems: 'center',
+                justifyContent: 'center',
                 backgroundColor: isSelected ? colors.primary : colors.surface,
                 borderWidth: isSelected ? 0 : 1,
                 borderColor: colors.border,
                 borderRadius: radius.full,
                 paddingHorizontal: '$lg' as any,
-                paddingVertical: '$sm' as any,
-                gap: '$sm' as any,
+                paddingVertical: '$md' as any,
               }}
             >
-              <Text fontSize={fontSize.xl}>{icon}</Text>
               <Text 
                 color={isSelected ? colors.surface : colors.text} 
                 fontSize={fontSize.sm} 

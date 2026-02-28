@@ -1,4 +1,5 @@
 import React from 'react';
+import { User, Heart, Beer, House } from 'lucide-react-native';
 import { YStack, Text, XStack, View } from 'tamagui';
 import { TouchableOpacity } from 'react-native';
 import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
@@ -8,11 +9,11 @@ import { TravelGroup, FamilySub } from '../../types/wizard.types';
 import { colors, radius, fontSize, spacing } from '../../../../core/theme/tokens';
 import { isRTL } from '../../../../core/i18n';
 
-const GROUPS: { id: TravelGroup; emoji: string; key: string }[] = [
-  { id: 'solo', emoji: '👤', key: 'solo' },
-  { id: 'couple', emoji: '👫', key: 'couple' },
-  { id: 'friends', emoji: '🏕️', key: 'friends' },
-  { id: 'family', emoji: '👨‍👩‍👧‍👦', key: 'family' },
+const GROUPS: { id: TravelGroup; key: string; Icon: any }[] = [
+  { id: 'solo', key: 'solo', Icon: User },
+  { id: 'couple', key: 'couple', Icon: Heart },
+  { id: 'friends', key: 'friends', Icon: Beer },
+  { id: 'family', key: 'family', Icon: House },
 ];
 
 export const Step2TravelGroup = () => {
@@ -53,8 +54,9 @@ export const Step2TravelGroup = () => {
                 borderColor: colors.border,
                 borderRadius: radius.xl,
                 padding: '$lg' as any,
+                minHeight: 80,
                 alignItems: 'center',
-                gap: '$sm' as any,
+                justifyContent: 'center',
                 shadowColor: colors.primaryDark,
                 shadowOpacity: isSelected ? 0.2 : 0,
                 shadowRadius: radius.lg,
@@ -62,7 +64,11 @@ export const Step2TravelGroup = () => {
                 elevation: isSelected ? 4 : 0,
               }}
             >
-              <Text fontSize={fontSize.title}>{group.emoji}</Text>
+              <group.Icon 
+                size={24} 
+                color={isSelected ? colors.surface : colors.primary} 
+                style={{ marginBottom: 4 }}
+              />
               <Text 
                 color={isSelected ? colors.surface : colors.text} 
                 fontSize={fontSize.md} 
