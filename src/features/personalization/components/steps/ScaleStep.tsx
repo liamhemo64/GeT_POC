@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { usePersonalizationStore } from '../../../../store/usePersonalizationStore';
 import { ScaleValue, WizardData } from '../../types/wizard.types';
 import { colors, radius, fontSize } from '../../../../core/theme/tokens';
+import { isRTL } from '../../../../core/i18n';
 
 interface ScaleStepProps {
   titleKey: string;
@@ -19,13 +20,15 @@ export const ScaleStep = ({ titleKey, fieldKey, options }: ScaleStepProps) => {
   const { t, i18n } = useTranslation();
   const { data, setField } = usePersonalizationStore();
   const selectedValue = data[fieldKey] as ScaleValue | null;
+  const rtl = isRTL(i18n.language);
 
   return (
-    <YStack gap="$xl" flex={1}>
+    <YStack gap="$xl" flex={1} {...{ dir: rtl ? 'rtl' : 'ltr' }}>
       <Text 
         fontSize={fontSize['2xl']} 
         fontWeight="700" 
         color={colors.primary} 
+        textAlign="auto"
       >
         {t(`personalization.${titleKey}`)}
       </Text>
@@ -54,6 +57,7 @@ export const ScaleStep = ({ titleKey, fieldKey, options }: ScaleStepProps) => {
                 color={isSelected ? colors.surface : colors.text} 
                 fontSize={fontSize.md} 
                 fontWeight={isSelected ? '700' : '500'}
+                textAlign="auto"
               >
                 {t(`personalization.${opt.labelKey}`)}
               </Text>

@@ -12,6 +12,7 @@ type DateType = 'arrival' | 'departure';
 export const Step1Dates = () => {
   const { t, i18n } = useTranslation();
   const { data, setField } = usePersonalizationStore();
+  const rtl = isRTL(i18n.language);
 
   const [showPicker, setShowPicker] = useState(false);
   const [activeType, setActiveType] = useState<DateType>('arrival');
@@ -48,17 +49,18 @@ export const Step1Dates = () => {
   };
 
   return (
-    <YStack gap="$xl" flex={1}>
+    <YStack gap="$xl" flex={1} {...{ dir: rtl ? 'rtl' : 'ltr' }}>
       <Text 
         fontSize={fontSize['2xl']} 
         fontWeight="700" 
         color={colors.primary} 
+        textAlign="auto"
       >
         {t('personalization.step1.title')}
       </Text>
 
       <YStack gap="$md">
-        <Text color={colors.textSecondary} fontSize={fontSize.md} fontWeight="600">
+        <Text color={colors.textSecondary} fontSize={fontSize.md} fontWeight="600" textAlign="auto">
           {t('personalization.step1.arrivalLabel')}
         </Text>
         <TouchableOpacity
@@ -74,14 +76,14 @@ export const Step1Dates = () => {
             width: '100%'
           }}
         >
-          <Text color={data.arrivalDate ? colors.primary : colors.textSecondary} fontSize={fontSize.lg} fontWeight="600">
+          <Text color={data.arrivalDate ? colors.primary : colors.textSecondary} fontSize={fontSize.lg} fontWeight="600" textAlign="auto">
             {data.arrivalDate ? data.arrivalDate.toLocaleDateString(i18n.language === 'he' ? 'he-IL' : 'en-US') : t('personalization.step1.selectDate')}
           </Text>
         </TouchableOpacity>
       </YStack>
 
       <YStack gap="$md">
-        <Text color={colors.textSecondary} fontSize={fontSize.md} fontWeight="600">
+        <Text color={colors.textSecondary} fontSize={fontSize.md} fontWeight="600" textAlign="auto">
           {t('personalization.step1.departureLabel')}
         </Text>
         <TouchableOpacity
@@ -97,7 +99,7 @@ export const Step1Dates = () => {
             width: '100%'
           }}
         >
-          <Text color={data.departureDate ? colors.primary : colors.textSecondary} fontSize={fontSize.lg} fontWeight="600">
+          <Text color={data.departureDate ? colors.primary : colors.textSecondary} fontSize={fontSize.lg} fontWeight="600" textAlign="auto">
             {data.departureDate ? data.departureDate.toLocaleDateString(i18n.language === 'he' ? 'he-IL' : 'en-US') : t('personalization.step1.selectDate')}
           </Text>
         </TouchableOpacity>

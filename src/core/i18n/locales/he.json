@@ -20,6 +20,13 @@
       "departureLabel": "תאריך חזרה",
       "selectDate": "בחר תאריך"
     },
+    "stepLocations": {
+      "title": "היכן נוחתים ומאיפה ממריאים?",
+      "arrivalLabel": "נוחתים ב-",
+      "departureLabel": "ממריאים מ-",
+      "arrivalPlaceholder": "לדוגמה: טוקיו",
+      "departurePlaceholder": "לדוגמה: אוסקה"
+    },
     "step2": {
       "title": "מי מטייל?",
       "solo": "לבד",

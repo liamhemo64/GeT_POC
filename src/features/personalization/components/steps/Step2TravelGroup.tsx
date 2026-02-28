@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { usePersonalizationStore } from '../../../../store/usePersonalizationStore';
 import { TravelGroup, FamilySub } from '../../types/wizard.types';
 import { colors, radius, fontSize, spacing } from '../../../../core/theme/tokens';
+import { isRTL } from '../../../../core/i18n';
 
 const GROUPS: { id: TravelGroup; emoji: string; key: string }[] = [
   { id: 'solo', emoji: '👤', key: 'solo' },
@@ -17,6 +18,7 @@ const GROUPS: { id: TravelGroup; emoji: string; key: string }[] = [
 export const Step2TravelGroup = () => {
   const { t, i18n } = useTranslation();
   const { data, setField } = usePersonalizationStore();
+  const rtl = isRTL(i18n.language);
 
   const handleGroupSelect = (id: TravelGroup) => {
     setField('travelGroup', id);
@@ -26,11 +28,12 @@ export const Step2TravelGroup = () => {
   };
 
   return (
-    <YStack gap="$xl" flex={1}>
+    <YStack gap="$xl" flex={1} {...{ dir: rtl ? 'rtl' : 'ltr' }}>
       <Text 
         fontSize={fontSize['2xl']} 
         fontWeight="700" 
         color={colors.primary} 
+        textAlign="auto"
       >
         {t('personalization.step2.title')}
       </Text>
@@ -64,6 +67,7 @@ export const Step2TravelGroup = () => {
                 color={isSelected ? colors.surface : colors.text} 
                 fontSize={fontSize.md} 
                 fontWeight="600"
+                textAlign="auto"
               >
                 {t(`personalization.step2.${group.key}`)}
               </Text>
@@ -93,7 +97,7 @@ export const Step2TravelGroup = () => {
                     borderRadius: radius.lg,
                   }}
                 >
-                  <Text color={colors.text} fontSize={fontSize.md} fontWeight={isSelected ? '700' : '500'}>
+                  <Text color={colors.text} fontSize={fontSize.md} fontWeight={isSelected ? '700' : '500'} textAlign="auto">
                     {t(`personalization.step2.${sub}`)}
                   </Text>
                   <View 

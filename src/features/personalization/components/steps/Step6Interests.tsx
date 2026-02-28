@@ -4,6 +4,7 @@ import { TouchableOpacity } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { usePersonalizationStore } from '../../../../store/usePersonalizationStore';
 import { colors, radius, fontSize } from '../../../../core/theme/tokens';
+import { isRTL } from '../../../../core/i18n';
 
 const INTERESTS = [
   { id: 'art', icon: '🎨' },
@@ -24,6 +25,7 @@ const INTERESTS = [
 export const Step6Interests = () => {
   const { t, i18n } = useTranslation();
   const { data, setField } = usePersonalizationStore();
+  const rtl = isRTL(i18n.language);
 
   const toggleInterest = (id: string) => {
     let current = [...data.interests];
@@ -36,11 +38,12 @@ export const Step6Interests = () => {
   };
 
   return (
-    <YStack gap="$xl" flex={1}>
+    <YStack gap="$xl" flex={1} {...{ dir: rtl ? 'rtl' : 'ltr' }}>
       <Text 
         fontSize={fontSize['2xl']} 
         fontWeight="700" 
         color={colors.primary} 
+        textAlign="auto"
       >
         {t('personalization.step6.title')}
       </Text>
@@ -70,6 +73,7 @@ export const Step6Interests = () => {
                 color={isSelected ? colors.surface : colors.text} 
                 fontSize={fontSize.sm} 
                 fontWeight={isSelected ? '600' : '500'}
+                textAlign="auto"
               >
                 {t(`personalization.step6.${id}`)}
               </Text>

@@ -12,6 +12,7 @@ import { WizardProgressBar } from './WizardProgressBar';
 import { WizardNavButtons } from './WizardNavButtons';
 import { spacing } from '../../../core/theme/tokens';
 import { Step1Dates } from './steps/Step1Dates';
+import { Step2Locations } from './steps/Step2Locations';
 import { Step2TravelGroup } from './steps/Step2TravelGroup';
 import { ScaleStep } from './steps/ScaleStep';
 import { Step6Interests } from './steps/Step6Interests';
@@ -49,12 +50,13 @@ export const WizardController = ({ onComplete }: WizardControllerProps) => {
   const isNextDisabled = () => {
     switch (currentStep) {
       case 1: return !data.arrivalDate || !data.departureDate;
-      case 2: return !data.travelGroup || (data.travelGroup === 'family' && !data.familySub);
-      case 3: return !data.travelPace;
-      case 4: return !data.natureLevel;
-      case 5: return !data.cityLevel;
-      case 6: return data.interests.length === 0;
-      case 7: return false; // Wishlist is optional
+      case 2: return !data.arrivalLocation || !data.departureLocation;
+      case 3: return !data.travelGroup || (data.travelGroup === 'family' && !data.familySub);
+      case 4: return !data.travelPace;
+      case 5: return !data.natureLevel;
+      case 6: return !data.cityLevel;
+      case 7: return data.interests.length === 0;
+      case 8: return false; // Wishlist is optional
       default: return false;
     }
   };
@@ -86,8 +88,9 @@ export const WizardController = ({ onComplete }: WizardControllerProps) => {
           style={{ flex: 1 }}
         >
           {currentStep === 1 && <Step1Dates />}
-          {currentStep === 2 && <Step2TravelGroup />}
-          {currentStep === 3 && (
+          {currentStep === 2 && <Step2Locations />}
+          {currentStep === 3 && <Step2TravelGroup />}
+          {currentStep === 4 && (
             <ScaleStep
               titleKey="step3.title"
               fieldKey="travelPace"
@@ -98,7 +101,7 @@ export const WizardController = ({ onComplete }: WizardControllerProps) => {
               ]}
             />
           )}
-          {currentStep === 4 && (
+          {currentStep === 5 && (
             <ScaleStep
               titleKey="step4.title"
               fieldKey="natureLevel"
@@ -109,7 +112,7 @@ export const WizardController = ({ onComplete }: WizardControllerProps) => {
               ]}
             />
           )}
-          {currentStep === 5 && (
+          {currentStep === 6 && (
             <ScaleStep
               titleKey="step5.title"
               fieldKey="cityLevel"
@@ -120,8 +123,8 @@ export const WizardController = ({ onComplete }: WizardControllerProps) => {
               ]}
             />
           )}
-          {currentStep === 6 && <Step6Interests />}
-          {currentStep === 7 && <Step7Wishlist />}
+          {currentStep === 7 && <Step6Interests />}
+          {currentStep === 8 && <Step7Wishlist />}
         </Animated.View>
       </ScrollView>
 

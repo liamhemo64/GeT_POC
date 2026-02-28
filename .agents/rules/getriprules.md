@@ -67,3 +67,7 @@ You must generate the code following this exact folder structure. Do not dump ge
   /services             (Global Mock APIs - mockData.ts)
   /store                (Root Zustand Store combining feature slices if needed)
   App.tsx               (Entry Point, Provider Composition)
+
+  6. **Universal Web DOM & Text RTL Support (Critical):**
+     - **Context Preservation:** Tamagui can lose RTL context on the Web DOM. When generating root wrappers or global layouts, you must explicitly apply `dir={isRTL(i18n.language) ? 'rtl' : 'ltr'}` to the outermost wrapper (e.g. `YStack` or `View`).
+     - **Bilingual Alignment:** Never rely on default LTR/RTL text alignments when rendering mixed Hebrew and English text. You must always explicitly append `textAlign="auto"` on all Tamagui `<Text>` and `<Input>` components to strictly enforce organic characters-based alignments.

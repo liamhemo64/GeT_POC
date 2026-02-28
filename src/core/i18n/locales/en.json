@@ -20,6 +20,13 @@
       "departureLabel": "Departure Date",
       "selectDate": "Select Date"
     },
+    "stepLocations": {
+      "title": "Where do you arrive and depart?",
+      "arrivalLabel": "Arriving At",
+      "departureLabel": "Departing From",
+      "arrivalPlaceholder": "e.g., Tokyo",
+      "departurePlaceholder": "e.g., Osaka"
+    },
     "step2": {
       "title": "Who's traveling?",
       "solo": "Solo",

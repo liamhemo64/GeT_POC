@@ -8,26 +8,31 @@ export interface WizardData {
   // Step 1
   arrivalDate:   Date | null;
   departureDate: Date | null;
-  // Step 2
+  // Step 2 - Locations
+  arrivalLocation: string;
+  departureLocation: string;
+  // Step 3
   travelGroup:   TravelGroup | null;
   familySub:     FamilySub | null;
-  // Step 3 – Travel Pace
+  // Step 4 – Travel Pace
   travelPace:    ScaleValue | null;
-  // Step 4 – Nature
+  // Step 5 – Nature
   natureLevel:   ScaleValue | null;
-  // Step 5 – City
+  // Step 6 – City
   cityLevel:     ScaleValue | null;
-  // Step 6
-  interests:     string[];
   // Step 7
+  interests:     string[];
+  // Step 8
   wishlist:      string;
 }
 
-export const WIZARD_STEP_COUNT = 7;
+export const WIZARD_STEP_COUNT = 8;
 
 export const defaultWizardData: WizardData = {
   arrivalDate:   null,
   departureDate: null,
+  arrivalLocation: '',
+  departureLocation: '',
   travelGroup:   null,
   familySub:     null,
   travelPace:    null,

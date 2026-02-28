@@ -3,6 +3,7 @@ import { YStack, Text, XStack } from 'tamagui';
 import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 import { useTranslation } from 'react-i18next';
 import { colors, radius, fontSize, size } from '../../../core/theme/tokens';
+import { isRTL } from '../../../core/i18n';
 
 interface WizardProgressBarProps {
   currentStep: number;
@@ -10,8 +11,9 @@ interface WizardProgressBarProps {
 }
 
 export const WizardProgressBar = ({ currentStep, totalSteps }: WizardProgressBarProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const progress = useSharedValue(0);
+  const rtl = isRTL(i18n.language);
 
   useEffect(() => {
     // 0 to 1 scale
@@ -31,9 +33,9 @@ export const WizardProgressBar = ({ currentStep, totalSteps }: WizardProgressBar
   });
 
   return (
-    <YStack gap="$sm" width="100%">
+    <YStack gap="$sm" width="100%" {...{ dir: rtl ? 'rtl' : 'ltr' }}>
       <XStack justifyContent="space-between" alignItems="center">
-        <Text color={colors.textSecondary} fontSize={fontSize.sm} fontWeight="600">
+        <Text color={colors.textSecondary} fontSize={fontSize.sm} fontWeight="600" textAlign="auto">
           {t('personalization.progress', { current: currentStep, total: totalSteps })}
         </Text>
       </XStack>
