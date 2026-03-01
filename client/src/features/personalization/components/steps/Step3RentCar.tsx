@@ -100,6 +100,12 @@ export const Step3RentCar = () => {
           </YStack>
         </TouchableOpacity>
       </XStack>
+
+      <YStack flex={1} justifyContent="center" padding="$lg">
+        <Text color={colors.text} opacity={0.6} fontSize={fontSize.md} textAlign="center" lineHeight={24}>
+          {t('personalization.stepRentCar.yesDesc')}
+        </Text>
+      </YStack>
     </YStack>
   );
 };

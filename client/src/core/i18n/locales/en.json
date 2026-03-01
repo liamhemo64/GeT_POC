@@ -30,7 +30,8 @@
     "stepRentCar": {
       "title": "Do you intend to rent a car?",
       "yes": "Yes",
-      "no": "No"
+      "no": "No",
+      "yesDesc": "With a car you can travel Japan to further places and local spots."
     },
     "stepThemeParks": {
       "title": "Do you love theme parks?",
@@ -63,7 +64,10 @@
       "title": "Nature & Hiking",
       "viewpoints": "Viewpoints",
       "hiking": "Short Hikes",
-      "camping": "Trekking & Camping"
+      "camping": "Trekking & Camping",
+      "viewpointsDesc": "See only views with a max 1 hour of walking",
+      "hikingDesc": "Moderate trails and half-day nature walks",
+      "campingDesc": "Challenging treks and full immersion in nature"
     },
     "step5": {
       "title": "City Vibes",

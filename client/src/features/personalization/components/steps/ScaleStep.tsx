@@ -13,6 +13,7 @@ interface ScaleStepProps {
   options: {
     value: ScaleValue;
     labelKey: string;
+    descKey?: string;
   }[];
 }
 
@@ -64,6 +65,19 @@ export const ScaleStep = ({ titleKey, fieldKey, options }: ScaleStepProps) => {
             </TouchableOpacity>
           );
         })}
+      </YStack>
+
+      <YStack flex={1} justifyContent="center" padding="$lg" gap="$sm">
+        {options.map((opt) => opt.descKey ? (
+          <XStack key={`desc-${opt.value}`} alignItems="flex-start" gap="$sm">
+            <Text color={colors.primary} fontWeight="bold" fontSize={fontSize.md} width={120} textAlign="auto">
+              {t(`personalization.${opt.labelKey}`)}:
+            </Text>
+            <Text color={colors.text} opacity={0.6} fontSize={fontSize.md} flex={1} textAlign="auto">
+              {t(`personalization.${opt.descKey}`)}
+            </Text>
+          </XStack>
+        ) : null)}
       </YStack>
     </YStack>
   );

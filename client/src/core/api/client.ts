@@ -7,13 +7,13 @@ const getBaseUrl = () => {
   if (__DEV__) {
     if (Platform.OS === 'android') {
        // Android Emulator loops back to the host machine via 10.0.2.2
-      return 'http://10.0.2.2:3000/api';
+      return 'http://10.0.2.2:5222';
     }
     // Web and iOS Simulator
-    return 'http://localhost:3000/api';
+    return 'http://localhost:5222';
   }
   // Production URL
-  return 'https://api.getrip.com/api'; 
+  return 'https://api.getrip.com'; 
 };
 
 export const apiClient = axios.create({

@@ -112,9 +112,9 @@ export const WizardController = ({ onComplete }: WizardControllerProps) => {
               titleKey="step4.title"
               fieldKey="natureLevel"
               options={[
-                { value: 1, labelKey: 'step4.viewpoints' },
-                { value: 2, labelKey: 'step4.hiking' },
-                { value: 3, labelKey: 'step4.camping' },
+                { value: 1, labelKey: 'step4.viewpoints', descKey: 'step4.viewpointsDesc' },
+                { value: 2, labelKey: 'step4.hiking', descKey: 'step4.hikingDesc' },
+                { value: 3, labelKey: 'step4.camping', descKey: 'step4.campingDesc' },
               ]}
             />
           )}
